@@ -16,23 +16,23 @@ const sideBarTemplate = document.querySelector('#sidebar-template').innerHTML
 const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 const autoscroll = () => {
-    const newMessage = messages.lastElementChild
+    // const newMessage = messages.lastElementChild
 
-    //height of the new message
-    const newMessageStyle = getComputedStyle(newMessage) 
-    const newMessageMargin = parseInt(newMessageStyle.marginBottom)
-    const newMessageHeight = newMessage.offsetHeight + newMessageMargin
+    // //height of the new message
+    // const newMessageStyle = getComputedStyle(newMessage) 
+    // const newMessageMargin = parseInt(newMessageStyle.marginBottom)
+    // const newMessageHeight = newMessage.offsetHeight + newMessageMargin
 
-    //height of messages container
-    const visibleHeight = messages.offsetHeight
-    const containerHeight = messages.scrollHeight
+    // //height of messages container
+    // const visibleHeight = messages.offsetHeight
+    // const containerHeight = messages.scrollHeight
 
-    //how far have i scrolled
-    const scrollOffset = messages.scrollTop + visibleHeight
+    // //how far have i scrolled
+    // const scrollOffset = messages.scrollTop + visibleHeight
 
-    if (containerHeight - newMessageHeight <= scrollOffset) {
-        messages.scrollTop = messages.scrollHeight
-    }
+    // if (containerHeight - newMessageHeight <= scrollOffset) {
+    // }
+    messages.scrollTop = messages.scrollHeight
     
 }
 
